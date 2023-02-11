@@ -1,0 +1,32 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/java
+{
+	"name": "Scala",
+	"image": "mcr.microsoft.com/devcontainers/java:11",
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "none",
+			"installMaven": "false",
+			"installGradle": "false"
+		},
+		"ghcr.io/devcontainers/features/git:1": {}
+	},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"scalameta.metals"
+		,"oderwat.indent-rainbow"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [8080],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "java -version,
+	"postCreateCommand": "curl -s \"https://get.sdkman.io\" | bash && echo 'Necesitamos instalar sdk install sbt'" // && java -version && sudo ln -snf /bin/bash /bin/sh && source /usr/local/sdkman/bin/sdkman-init.sh && sdk install sbt"
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
