@@ -17,3 +17,7 @@
 **/.scannerwork/
 **/node_modules/
 
+target/
+*.iml
+**/.idea/*
+
